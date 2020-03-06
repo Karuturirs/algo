@@ -1,6 +1,6 @@
 package com.prepare.algo;
 
-import org.junit.*;
+import org.junit.Test;
 import com.prepare.algo.QuickSort;
 
 import java.util.Arrays;
