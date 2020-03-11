@@ -27,13 +27,16 @@ public class CheckPermutation {
             char[] y = b.toCharArray();
             Arrays.sort(x);
             Arrays.sort(y);
-            int i=0;
+
+            return String.valueOf(x).equals(String.valueOf(y));
+
+            /*int i=0;
             while(i < x.length){
                 if(x[i] != y[i++]){
                     return false;
                 }
             }
-            return true;
+            return true;*/
         }else{
             return false;
         }

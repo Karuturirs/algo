@@ -12,6 +12,8 @@ import java.util.HashMap;
  * EXAMPLE
  * Input: Tact Coa
  * Output: True (permutations: "taco cat", "atco eta", etc.)
+ * Time complexity: O(n)
+ * Space complexity: O(n)  can be done in O(1) using bit vector( TODO )
  */
 public class PalindromePermutation {
 
