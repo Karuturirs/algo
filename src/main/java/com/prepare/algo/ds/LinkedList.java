@@ -13,11 +13,11 @@ public class LinkedList<t>{
      * @param x
      */
     public void put(t x) {
-        if (node == null) {
-            node = new Node(x);
+        if (this.node == null) {
+            this.node = new Node(x);
             this.size = this.size + 1;
         } else {
-            Node n = node;
+            Node n = this.node;
             for (int i = 0; i < size; i++) {
                 if (null == n.getNode()) {
                     Node<t> temp = new Node(x);
