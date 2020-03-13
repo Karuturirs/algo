@@ -1,4 +1,4 @@
-package com.prepare.algo.practice.crackingcodinginterview;
+package com.prepare.algo.practice.crackingcodinginterview.ArraysAndStrings;
 
 import java.util.HashMap;
 

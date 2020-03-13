@@ -1,8 +1,8 @@
-package com.prepare.algo.practice.crackingcodinginterview;
+package com.prepare.algo.practice.crackingcodinginterview.LinkedList;
 
 import java.util.HashSet;
 
-public class RemoveDuplicatesLinkedList {
+public class LinkedListManipulation {
 
     public static void main(String[] args) {
 
@@ -18,12 +18,22 @@ public class RemoveDuplicatesLinkedList {
         ll.head = root;
 
         ll.print();
-        RemoveDuplicatesLinkedList rll = new RemoveDuplicatesLinkedList();
 
+        ll.reverse();
+        System.out.print("Reversed Linked List::");
+        ll.print();
+        ll.reverse();
+        System.out.print("Reversed Linked List::");
+        ll.print();
+
+        LinkedListManipulation rll = new LinkedListManipulation();
+
+        Node kthnode = rll.kthToLast(ll,3);
+        System.out.println("Kth node data::"+kthnode.data);
 
         Node n = rll.midOfLinkedList(ll);
-        System.out.println("Mid node::"+n.data);
-
+        System.out.println("Mid node value::"+n.data);
+        System.out.print("Remove duplicates::");
         ll = rll.removeDuplicates(ll);
         ll.print();
 
@@ -58,6 +68,39 @@ public class RemoveDuplicatesLinkedList {
         return ll;
     }
 
+    /**
+     * removes duplicates from the linkedlist and returns the Linkedlist
+     * Time Complexity : O(n^2)
+     * Space Complexity : O(1)
+     * @param ll
+     * @return
+     */
+    public LinkedList removeDuplicates2(LinkedList ll) {
+
+        //TODO: using two for loops
+
+        return null;
+
+    }
+
+
+    public Node kthToLast(LinkedList ll, int k){
+
+        Node node = ll.head;
+
+        int i =0;
+
+        while(i < k){
+            if(node == null){
+                return null;
+            }
+            node = node.next;
+            i++;
+
+        }
+        return node;
+    }
+
     public Node midOfLinkedList(LinkedList ll){
 
         if(ll == null){
@@ -74,30 +117,6 @@ public class RemoveDuplicatesLinkedList {
         return slw_ptr;
     }
 
-}
-
-class LinkedList{
-
-    Node head;
-
-    public void print(){
-        System.out.println("Start::");
-        Node head = this.head;
-        while(head!=null){
-            System.out.println(head.data);
-            head =head.next;
-        }
-    }
-}
-
-class Node{
-    int data;
-    Node next;
-
-    Node(int x){
-        this.data = x;
-        this.next = null;
-    }
 }
 
 
