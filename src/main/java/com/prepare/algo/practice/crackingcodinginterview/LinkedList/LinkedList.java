@@ -4,6 +4,9 @@ public class LinkedList{
 
     Node head;
 
+    /**
+     * Print all the elements in the linkedlist
+     */
     public void print(){
         System.out.print("[");
         Node head = this.head;
@@ -14,6 +17,9 @@ public class LinkedList{
         System.out.println("]");
     }
 
+    /**
+     * Reverse all the linked list
+     */
     public void reverse(){
 
         Node newhead = null;

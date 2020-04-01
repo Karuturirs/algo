@@ -8,6 +8,7 @@ public class WordCountEngine {
     public static void main(String[] args){
         String document = "Practice makes perfect. you'll only get Perfect by practice. just practice!";
         wordCountEngine(document);
+
         System.out.println(reverse(document));
     }
 

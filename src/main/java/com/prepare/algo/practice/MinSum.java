@@ -3,6 +3,7 @@ package com.prepare.algo.practice;
 import java.util.*;
 
 /**
+ * do the operation of division by 2, and find the ceil until k times on the elements and generate min sum.
  * num = [2,3]
  * k=1
  *

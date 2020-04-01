@@ -2,8 +2,12 @@ package com.prepare.algo.practice.crackingcodinginterview.LinkedList;
 
 public class LoopDetection {
 
+    /**
+     * Given a Head Node of linkedlist find the Node where the loop begins
+     * @param head
+     * @return
+     */
     public Node findBegginingOfLoop(Node head){
-
 
         Node fast = head;
         Node slow = head;
