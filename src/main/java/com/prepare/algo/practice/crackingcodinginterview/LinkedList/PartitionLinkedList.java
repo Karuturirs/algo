@@ -30,13 +30,43 @@ public class PartitionLinkedList {
 
         ll.print();
 
+        PartitionLinkedList pll = new PartitionLinkedList();
 
+        ll.head = pll.reorderByPartition(root, 5);
+
+        ll.print("After partition");
 
     }
 
-    public void reorderByPartition(Node head, int partition){
+    /**
+     *
+     * TimeComplexity :O(n)
+     * SpaceComplexity: O(1)
+     * @param head
+     * @param partition
+     */
+    public Node reorderByPartition(Node head, int partition){
 
-        
+        //Using before and after list and joining them accordingly.
+        Node before_head = new Node(0);
+        Node before = before_head;
+        Node after_head = new Node(0);
+        Node after = after_head;
 
+        while(head != null){
+            if( head.data < partition){
+                before.next = head;
+                before = before.next;
+            }else{
+                after.next = head;
+                after = after.next;
+            }
+            head = head.next;
+        }
+
+        after.next = null;
+        before.next = after_head.next;
+
+        return before_head.next;
     }
 }

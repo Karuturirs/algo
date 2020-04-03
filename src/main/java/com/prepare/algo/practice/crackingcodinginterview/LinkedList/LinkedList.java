@@ -17,6 +17,11 @@ public class LinkedList{
         System.out.println("]");
     }
 
+    public void print(String msg){
+        System.out.print(msg+ " ");
+        print();
+    }
+
     /**
      * Reverse all the linked list
      */

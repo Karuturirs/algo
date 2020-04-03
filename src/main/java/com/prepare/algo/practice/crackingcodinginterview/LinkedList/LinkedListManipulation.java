@@ -161,6 +161,26 @@ public class LinkedListManipulation {
 
     }
 
+
+    /**
+     * Reverse a linked list
+     * Time Complexity : O(n)
+     * Space Complexity : O(1)
+     * @param head
+     * @return
+     */
+    public Node reverseList(Node head) {
+        Node nexthead = null;
+        while(head != null){
+            Node temp = head.next;
+            head.next = nexthead;
+            nexthead = head;
+            head = temp;
+        }
+
+        return nexthead;
+    }
+
 }
 
 
