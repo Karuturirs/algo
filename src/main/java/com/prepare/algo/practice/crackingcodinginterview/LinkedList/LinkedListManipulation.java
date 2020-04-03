@@ -37,6 +37,22 @@ public class LinkedListManipulation {
         ll = rll.removeDuplicates(ll);
         ll.print();
 
+        System.out.print("Remove the mid element::");
+        rll.deleteMidNodeoFLinkedList(root);
+        ll.print();
+
+
+        Node head = new Node(2);
+        head.next = new Node(3);
+        head.next.next = new Node(4);
+        head.next.next.next = new Node(5);
+        LinkedList llh = new LinkedList();
+        llh.head = head;
+        llh.print();
+        System.out.print("Remove the mid element::");
+        rll.deleteMidNodeoFLinkedList(head);
+        llh.print();
+
     }
 
     /**
@@ -115,6 +131,34 @@ public class LinkedListManipulation {
             slw_ptr = slw_ptr.next;
         }
         return slw_ptr;
+    }
+
+    /**
+     * Delete Middle Node: Implement an algorithm to delete a node in the middle (i.e., any node but
+     * the first and last node, not necessarily the exact middle) of a singly linked list, given only access to
+     * that node.
+     * EXAMPLE
+     * lnput:the node c from the linked list a->b->c->d->e->f
+     * Result: nothing is returned, but the new linked list looks like a->b->c->e->f
+     *
+     * @param head
+     */
+    public void deleteMidNodeoFLinkedList(Node head){
+
+        Node fast = head;
+        Node slow = head;
+        Node prev = null;
+
+        while(fast!= null && fast.next!= null){
+            fast = fast.next.next;
+            prev = slow;
+            slow = slow.next;
+        }
+
+        if(prev != null && slow.next !=null){
+            prev.next = slow.next;
+        }
+
     }
 
 }
