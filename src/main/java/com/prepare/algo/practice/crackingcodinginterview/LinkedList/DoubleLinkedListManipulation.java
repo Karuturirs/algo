@@ -3,8 +3,10 @@ package com.prepare.algo.practice.crackingcodinginterview.LinkedList;
 import java.util.Stack;
 
 /**
- * Given a Double linked list (tree) where it needs to next and children.
- * Reformat the above to linkedlist
+ * Given a Double linked list which has next node and child nodes
+ * where it needs to be converted to double linked list with no child nodes, moving all children to next and existing node next to end of the children
+ *
+ *
  *
  *  1 <=> 2<=> 3 <=> 4 <=> 5 <=> 6 <=> null
  *             |           |
@@ -14,6 +16,16 @@ import java.util.Stack;
  *                   11 <=> 12 <=> 13 <=> null
  *
  *
+ * Current class format
+ * class Node{
+ *
+ *         int data;
+ *         Node prev;
+ *         Node next;
+ *         Node child;
+ *  }
+ *
+ *  Reformat the above to below double linkedlist
  *  solution : 1 <=> 2 <=> 3 <=> 7 <=> 8 <=> 11 <=> 12 <=> 13 <=> 9 <=> 10 <=> 4<=> 5 <=> 14 <=> 15 <=> 6 <=> null
  */
 
