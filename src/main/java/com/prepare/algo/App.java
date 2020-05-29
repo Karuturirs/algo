@@ -1,5 +1,6 @@
 package com.prepare.algo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -15,6 +16,15 @@ public class App
 
      a. exchange(x , 0, 1);
       System.out.println(" - "+ Arrays.toString(x));
+
+
+      ArrayList<String> al=new ArrayList<String>();
+      al.add("Viru");
+      al.add("Saurav");
+      al.add("Mukesh");
+      al.add("Tahir");
+
+      al.forEach( System.out::println);
 
   }
 

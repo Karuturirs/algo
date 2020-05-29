@@ -14,27 +14,30 @@ public class MinSum {
 
     public static void main(String[] args){
        int sum = minSum(new ArrayList<Integer>(
-            Arrays.asList(10,20,7)),4);
+            Arrays.asList(10,20,7,5,3,4)),4);
        System.out.println(sum);
     }
 
 
     public static int minSum(List<Integer> num, int k) {
-        PriorityQueue<Integer> stack = new PriorityQueue<>(
+       /* PriorityQueue<Integer> stack = new PriorityQueue<>(
                 new Comparator<Integer>() {
                     public int compare(Integer a, Integer b){
-                        if(a<b) return 1;
-                        if(a>b) return -1;
+                        if(a>b) return 1;
+                        if(a<b) return -1;
                         return 0;
-                        // return b.compareTo(a);
 
+                        //return a.compareTo(b);
                     }
                 }
-        );
+        );*/
+
+        PriorityQueue<Integer> stack = new PriorityQueue<>((a,b)->a.compareTo(b));
 
         int sum =0;
         for(int j=0;j<num.size(); j++){
             sum += num.get(j);
+            System.out.println(num.get(j));
             stack.add(num.get(j));
         }
 

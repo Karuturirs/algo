@@ -13,24 +13,24 @@ import java.util.HashMap;
  * Input: Tact Coa
  * Output: True (permutations: "taco cat", "atco eta", etc.)
  * Time complexity: O(n)
- * Space complexity: O(n)  can be done in O(1) using bit vector( TODO )
+ * Space complexity: O(n)  can be done in O(1) using bit ( TODO )
  */
 public class PalindromePermutation {
 
     public static void main(String[] args) {
         String a = "aba";
         PalindromePermutation pp =  new PalindromePermutation();
-        System.out.println(pp.isPalindrome(a));
-        System.out.println(pp.isPalindrome("a"));
-        System.out.println(pp.isPalindrome(""));
-        System.out.println(pp.isPalindrome(null));
-        System.out.println(pp.isPalindrome("abba"));
-        System.out.println(pp.isPalindrome("abbaa"));
-        System.out.println(pp.isPalindrome("abbaaaaaaaaaaaaa"));
+        System.out.println(pp.isPalindrome(a)+" - "+pp.isPalindromeFun(a));
+        System.out.println(pp.isPalindrome("a")+" - "+pp.isPalindromeFun("a"));
+        System.out.println(pp.isPalindrome("")+" - "+pp.isPalindromeFun(""));
+        System.out.println(pp.isPalindrome(null)+" - "+pp.isPalindromeFun(null));
+        System.out.println(pp.isPalindrome("abba")+" - "+pp.isPalindromeFun("abba"));
+        System.out.println(pp.isPalindrome("abbaa")+" - "+pp.isPalindromeFun("abbaa"));
+        System.out.println(pp.isPalindrome("abbaaaaaaaaaaaaa")+" - "+pp.isPalindromeFun("abbaaaaaaaaaaaaa"));
     }
 
     public boolean isPalindrome(String word){
-        if(word == null || word == ""){
+        if(word == null || word.equals("")){
            return false;
         }
 
@@ -58,6 +58,26 @@ public class PalindromePermutation {
 
 
         return onces <= 1;
+    }
+
+    public boolean isPalindromeFun(String str) {
+
+        if(str == null || str.equals(""))
+            return false;
+
+        int i = 0, j = str.length() - 1;
+
+        while (i < j) {
+
+            if (str.charAt(i) != str.charAt(j))
+                return false;
+
+
+            i++;
+            j--;
+        }
+
+        return true;
     }
 
 }
