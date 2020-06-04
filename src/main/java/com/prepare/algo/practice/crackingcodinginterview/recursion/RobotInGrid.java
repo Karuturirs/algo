@@ -37,6 +37,7 @@ public class RobotInGrid {
 
     /**
      * Recursive function to determine the total no:of paths
+     * Time complexity is 2^(row*column)
      * @param grid : Matrix array with 0 and 1's
      * @param row : current location of the row
      * @param column : current location of the column
@@ -66,7 +67,8 @@ public class RobotInGrid {
     }
 
     /**
-     * Memorization method for top to bottom approach.
+     * Memorization method for top to bottom approach, to determine no:of paths
+     * Time complexity is (row*column)
      * @param grid
      * @param row
      * @param column
@@ -112,7 +114,6 @@ public class RobotInGrid {
 
         return count;
     }
-
 
 
 
