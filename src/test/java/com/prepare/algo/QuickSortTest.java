@@ -1,13 +1,11 @@
 package com.prepare.algo;
 
-import org.junit.Test;
 import com.prepare.algo.QuickSort;
 
 import java.util.Arrays;
 
 public class QuickSortTest
 {
-  @Test
   public void quickSortAssert()
   {
       Integer[] input = {5,7,8,1,9,3,2};

@@ -26,6 +26,13 @@ public class App
 
       al.forEach( System.out::println);
 
+
+      long m0 = Runtime.getRuntime().freeMemory();
+      String s = new String("canvadsfdsfsdfs");
+      long m1 = Runtime.getRuntime().freeMemory();
+      System.out.println( "----");
+      System.out.println( m0 - m1);
+
   }
 
     public  void exchange(int[] data, int p ,  int index){
